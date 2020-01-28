@@ -5,7 +5,9 @@ node_js:
   - 10.0.0
   - node
 install:
-  - yarn install
+  - yarn install --production
+  - yarn add jest@24.8.0
+  - yarn add coveralls@3.0.4
 after_success: 'yarn coveralls'
 cache:
   yarn: true
